@@ -6,7 +6,7 @@
 /*   By: mohtakra <mohtakra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 13:30:56 by abenheni          #+#    #+#             */
-/*   Updated: 2023/12/08 12:21:37 by mohtakra         ###   ########.fr       */
+/*   Updated: 2023/12/08 14:20:11 by mohtakra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,6 @@
 # define MOVE_SPEED 5
 # define ROTATION_SPEED 1.5
 # define NUM_RAYS  WIDTH
-// # define RIGHT_ARROW  65363
-// # define LEFT_ARROW  65361
-// # define KEY_A 97
-// # define KEY_S 115
-// # define KEY_W  119
-// # define KEY_D 100
-// # define KEY_ESC  65307
 # define RIGHT_ARROW  124
 # define LEFT_ARROW  123
 # define KEY_A 0
@@ -56,7 +49,7 @@ typedef struct player
 	int		walk_direction;
 	bool	is_lr;
 	double	rotation_angle;
-}t_player;
+}	t_player;
 
 typedef struct help
 {
@@ -69,7 +62,7 @@ typedef struct help
 	double	y_intercept;
 	double	x_intercept;
 	double	y_step;
-}t_help;
+}	t_help;
 
 typedef struct ray
 {
