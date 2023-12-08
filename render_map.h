@@ -6,7 +6,7 @@
 /*   By: mohtakra <mohtakra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 13:30:56 by abenheni          #+#    #+#             */
-/*   Updated: 2023/12/04 13:55:38 by mohtakra         ###   ########.fr       */
+/*   Updated: 2023/12/08 12:21:37 by mohtakra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@
 # define HEIGHT 720
 # define TILE_SIZE 30
 # define FOV 60.0
-# define MOVE_SPEED 10
-# define ROTATION_SPEED 2
+# define MOVE_SPEED 5
+# define ROTATION_SPEED 1.5
 # define NUM_RAYS  WIDTH
 // # define RIGHT_ARROW  65363
 // # define LEFT_ARROW  65361

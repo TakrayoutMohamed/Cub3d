@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   handle_vert.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mohtakra <mohtakra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 13:30:03 by abenheni          #+#    #+#             */
-/*   Updated: 2023/12/04 13:30:04 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/12/08 12:20:57 by mohtakra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	check_dir_left(t_ray ray)
 {
 	if (ray.is_ray_facing_left)
-		return (-2);
+		return (-1);
 	return (0);
 }
 
@@ -56,7 +56,7 @@ void	handle_vert(t_data *info, int ray_index)
 	t_ray	*ray;
 
 	ray = &info->my_ray[ray_index];
-	x_intercept = floor(info->_player.x / TILE_SIZE) * TILE_SIZE;
+	x_intercept = (int)(info->_player.x / TILE_SIZE) * TILE_SIZE;
 	if (ray->is_ray_facing_right)
 		x_intercept += TILE_SIZE;
 	y_intercept = \

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   handle_horizantal.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mohtakra <mohtakra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 13:30:00 by abenheni          #+#    #+#             */
-/*   Updated: 2023/12/04 13:30:01 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/12/08 11:51:41 by mohtakra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	handle_horizantal(t_data *info, int ray_index)
 	t_ray	*ray;
 
 	ray = &info->my_ray[ray_index];
-	y_intercept = floor(info->_player.y / TILE_SIZE) * TILE_SIZE;
+	y_intercept = (int)(info->_player.y / TILE_SIZE) * TILE_SIZE;
 	if (ray->is_ray_facing_down)
 		y_intercept += TILE_SIZE;
 	x_intercept = \
