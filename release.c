@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   release.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mohtakra <mohtakra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 13:30:46 by abenheni          #+#    #+#             */
-/*   Updated: 2023/12/04 13:30:47 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/12/08 15:20:04 by mohtakra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,9 @@ int	release(int key, t_data *info)
 {
 	t_player	*player;
 
+	(void) key;
 	player = &info->_player;
-	if (key == KEY_A || key == KEY_D || key == KEY_W || key == KEY_S)
-	{
-		player->walk_direction = 0;
-	}
-	if (key == RIGHT_ARROW || key == LEFT_ARROW)
-		player->turn_direction = 0;
-	return (1);
+	player->walk_direction = 0;
+	player->turn_direction = 0;
+	return (0);
 }
