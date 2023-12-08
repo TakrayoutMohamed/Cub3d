@@ -6,7 +6,7 @@
 /*   By: mohtakra <mohtakra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 13:30:08 by abenheni          #+#    #+#             */
-/*   Updated: 2023/12/08 15:16:26 by mohtakra         ###   ########.fr       */
+/*   Updated: 2023/12/08 16:12:59 by mohtakra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static void	render_3d_effect(t_data *info, int ray_index)
 	t_ray	*ray;
 
 	ray = &info->my_ray[ray_index];
-	distance_to_projection_plane = (WIDTH / 3) / tan(((FOV * M_PI) / 180) / 2);
+	distance_to_projection_plane = (WIDTH / 2) / tan(((FOV * M_PI) / 180) / 2);
 	ray->distance *= cos(ray->ray_angle - info->_player.rotation_angle);
 	wall_height = (TILE_SIZE / ray->distance) * distance_to_projection_plane;
 	ray->wall_height = wall_height;
