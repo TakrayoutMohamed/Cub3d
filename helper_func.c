@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   helper_func.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: takra <takra@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 13:30:08 by abenheni          #+#    #+#             */
-/*   Updated: 2023/12/04 13:30:09 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/12/08 03:21:58 by takra            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	helper_func(t_data *info, double hor_hitdis, double ver_hitdis, int r_i)
 {
 	if (hor_hitdis < ver_hitdis)
 		info->my_ray[r_i].distance = hor_hitdis;
-	else if (hor_hitdis > ver_hitdis)
+	else if (hor_hitdis >= ver_hitdis)
 		info->my_ray[r_i].distance = ver_hitdis;
 	render_3d_effect(info, r_i);
 }
