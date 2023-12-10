@@ -1,37 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   has_player.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohtakra <mohtakra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/22 21:07:48 by mohtakra          #+#    #+#             */
-/*   Updated: 2023/10/22 21:07:50 by mohtakra         ###   ########.fr       */
+/*   Created: 2022/10/25 04:51:47 by mohtakra          #+#    #+#             */
+/*   Updated: 2022/10/30 04:08:47 by mohtakra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libpars.h"
+#include "libft.h"
 
-/*check if the map has a player*/
-bool	has_player(char **map)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	int	i;
-	int	j;
-
-	i = 0;
-	while (map[i])
+	if (new)
 	{
-		j = 0;
-		while (map[i][j])
-		{
-			if (map[i][j] == 'N' || map[i][j] == 'W')
-				return (true);
-			if (map[i][j] == 'E' || map[i][j] == 'S')
-				return (true);
-			j++;
-		}
-		i++;
+		new->next = *lst;
+		*lst = new;
 	}
-	print_error("Error\nthier is no player in the map ", "has_player()");
-	return (false);
 }

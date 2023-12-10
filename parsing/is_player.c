@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   clean_struct.c                                     :+:      :+:    :+:   */
+/*   is_player.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohtakra <mohtakra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/22 21:21:12 by mohtakra          #+#    #+#             */
-/*   Updated: 2023/12/09 17:20:41 by mohtakra         ###   ########.fr       */
+/*   Created: 2023/12/09 19:48:56 by mohtakra          #+#    #+#             */
+/*   Updated: 2023/12/09 19:48:57 by mohtakra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libpars.h"
 
-void	clean_struct(t_cub *cub)
+bool	is_player(char c)
 {
-	if (cub)
-	{
-		free(cub->ea);
-		free(cub->we);
-		free(cub->so);
-		free(cub->no);
-		ft_freematrix(cub->map);
-		free(cub);
-	}
+	if (c == 'N' || c == 'W')
+		return (true);
+	if (c == 'E' || c == 'S')
+		return (true);
+	return (false);
 }

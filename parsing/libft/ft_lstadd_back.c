@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin_free.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohtakra <mohtakra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/22 21:23:40 by mohtakra          #+#    #+#             */
-/*   Updated: 2023/10/22 21:23:41 by mohtakra         ###   ########.fr       */
+/*   Created: 2022/10/25 23:00:05 by mohtakra          #+#    #+#             */
+/*   Updated: 2022/10/30 13:47:21 by mohtakra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libpars.h"
+#include "libft.h"
 
-/*join s1 with s2 and free the pointer to s1*/
-char	*ft_strjoin_free(char *s1, char *s2)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	char	*tmp;
+	t_list	*temp;
 
-	tmp = s1;
-	s1 = ft_strjoin(s1, s2);
-	free(tmp);
-	return (s1);
+	if (*lst)
+	{
+		temp = ft_lstlast(*lst);
+		temp->next = new;
+	}
+	else
+	{
+		ft_lstadd_front(lst, new);
+	}
 }

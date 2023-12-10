@@ -6,7 +6,7 @@
 /*   By: mohtakra <mohtakra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 21:24:50 by mohtakra          #+#    #+#             */
-/*   Updated: 2023/12/04 14:09:02 by mohtakra         ###   ########.fr       */
+/*   Updated: 2023/12/02 19:59:26 by mohtakra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,12 +115,12 @@ bool	set_textures_paths(t_cub *cub, char *line)
 		return (free(str), false);
 	if (!matrix[0] || !matrix[1] || matrix[2] != NULL)
 	{
-		ft_putstr_fd("Error\n from set_textures_paths part 1 \n", 2);
+		ft_putstr_fd("eeeeerrrror from set_textures_paths part 1 \n", 2);
 		return (free(str), ft_freematrix(matrix), false);
 	}
 	if (!set_textures(cub, matrix) && !set_floor_ceil(cub, matrix))
 	{
-		ft_putstr_fd("Error\n from set_textures_paths\n", 2);
+		ft_putstr_fd("eeeeerrrror from set_textures_paths\n", 2);
 		return (free(str), ft_freematrix(matrix), false);
 	}
 	return (free(str), ft_freematrix(matrix), true);

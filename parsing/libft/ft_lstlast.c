@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   has_double_new_line.c                              :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohtakra <mohtakra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/22 21:23:53 by mohtakra          #+#    #+#             */
-/*   Updated: 2023/10/22 21:23:54 by mohtakra         ###   ########.fr       */
+/*   Created: 2022/10/25 05:57:36 by mohtakra          #+#    #+#             */
+/*   Updated: 2022/10/25 23:37:16 by mohtakra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libpars.h"
+#include "libft.h"
 
-/*return true if the str has newline folowed by new line*/
-bool	has_double_new_line(char *str)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (!str)
-		return (true);
-	while (*str)
+	if (lst)
 	{
-		if (*str == '\n' && *(str + 1) == '\n')
-			return (true);
-		str++;
+		while (lst->next)
+			lst = lst->next;
+		return (lst);
 	}
-	return (false);
+	return (NULL);
 }

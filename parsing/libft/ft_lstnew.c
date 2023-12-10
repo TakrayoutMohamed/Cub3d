@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   clean_struct.c                                     :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohtakra <mohtakra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/22 21:21:12 by mohtakra          #+#    #+#             */
-/*   Updated: 2023/12/09 17:20:41 by mohtakra         ###   ########.fr       */
+/*   Created: 2022/10/25 03:24:16 by mohtakra          #+#    #+#             */
+/*   Updated: 2022/10/31 03:12:56 by mohtakra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libpars.h"
+#include "libft.h"
 
-void	clean_struct(t_cub *cub)
+t_list	*ft_lstnew(void *content)
 {
-	if (cub)
-	{
-		free(cub->ea);
-		free(cub->we);
-		free(cub->so);
-		free(cub->no);
-		ft_freematrix(cub->map);
-		free(cub);
-	}
+	t_list	*p;
+
+	p = (t_list *)malloc(sizeof(t_list));
+	if (!p)
+		return (NULL);
+	p->content = content;
+	p->next = NULL;
+	return (p);
 }

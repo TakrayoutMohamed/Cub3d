@@ -6,7 +6,7 @@
 /*   By: mohtakra <mohtakra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 21:21:30 by mohtakra          #+#    #+#             */
-/*   Updated: 2023/12/04 14:08:37 by mohtakra         ###   ########.fr       */
+/*   Updated: 2023/11/29 11:12:15 by mohtakra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_cub	*parse_data(int argc, char **argv)
 
 	if (argc == 1 || argc > 2)
 	{
-		ft_putstr_fd("Error\n", 2);
+		ft_putstr_fd("Error :\n", 2);
 		ft_putstr_fd("exemple : \"./cub3D map.cub\"", 2);
 		exit(EXIT_FAILURE);
 	}
